@@ -1,0 +1,141 @@
+@media (min-width: 768px) and (max-width: 1040px) {
+ 
+.section-one,
+.section-two {
+ grid-template-columns: 1fr 1fr; /* change to 1fr 1fr  */
+}
+
+.section-one-text,
+.section-two-text {
+  order: -1; /* change later depending on order on desktop  */
+}
+.section-one-text h1,
+.section-two-text h2 {
+  text-align: left;
+}
+
+
+.section-three {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.section-three-form {
+  order: 1; 
+  padding: 2rem;
+}
+.section-three-form form button
+ {
+ width: fit-content;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+footer {
+  gap: 4rem;
+}
+
+.footer-logo img {
+  min-width: 240px;
+}
+.footer-grid {
+  gap: 0.2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* change to 2 then 4 */
+}
+
+.footer-one {
+  display: flex;
+  flex-direction: column;
+}
+
+
+}
+
+@media (min-width: 1040.1px) {
+  
+.section-one,
+.section-two {
+ grid-template-columns: 1fr 1fr; /* change to 1fr 1fr  */
+ text-align: left;
+}
+.section-one-text,
+.section-two-text {
+  order: -1; /* change later depending on order on desktop  */
+}
+.section-one-text h1 {
+  font-size: 2.4rem;
+}
+.section-one-text p {
+  font-size: 1.2rem;
+}
+
+.section-one-text form {
+  grid-template-columns: 1fr 0.5fr;
+  gap: 1rem;
+ 
+}
+
+.section-one-text form input {
+  padding-top: 0px;
+
+}
+.section-three-form form button {
+ width: fit-content;
+ padding-left: 20px;
+ padding-right: 20px;
+}
+.section-one-text h1,
+.section-two-text h2 {
+  text-align: left;
+}
+.section-two-text h2  {
+  font-size: 1.5rem;
+}
+.section-three {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.section-three-form {
+  order: 1; 
+  padding: 2rem;
+}
+
+
+footer {
+  gap: 3rem;
+}
+
+.footer-logo img {
+  min-width: 240px;
+}
+.footer-grid {
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* change to 2 then 4 */
+}
+
+.footer-one {
+  display: flex;
+  flex-direction: column;
+}
+header,
+.section-one,
+.section-three,
+.section-two,
+footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+}
+

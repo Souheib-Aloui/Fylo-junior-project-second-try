@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+
+/* Primary  */
+
+--VeryDark-Blue: hsl(243, 87%, 12%);
+--Desaturated-Blue: hsl(238, 22%, 44%);
+
+/*  Accent */
+
+--Bright-Blue: hsl(224, 93%, 58%);
+--Moderate-Cyan: hsl(170, 45%, 43%);
+
+/* Neutral */
+
+--LightGrayish-Blue: hsl(240, 75%, 98%);
+--Light-Gray: hsl(0, 0%, 75%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* resets*/
+a {
+ text-decoration: none;
+ color: inherit;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+
+ /* headings header call-to-action
+ "Raleway", sans-serif;
+  weights : 400, 700   */
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif; /* body font */
+  font-weight: 400;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Header padding here  or body or wrapper*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container img { /* increase this with grwth of viewport */
+  max-width: 120px;
+}
+
+header ul {
+  display: flex;
+  gap: 10px; /* increase this with grwth of viewport */
+}
+header ul li {
+  color: var(--Desaturated-Blue);
+  font-size: 0.9rem; /* increase this with grwth of viewport */
+}
+
+.section-one,
+.section-two
+ {
+ padding: 1rem;
+ display: grid; 
+ grid-template-columns: 1fr; /* change to 1fr 1fr  */
+ gap: 1.25rem;
+ text-align: center;
+}
+
+.section-one-text,
+.section-two-text {
+  order: 1; /* change later depending on order on desktop  */
+  display: grid; /* so i can space things out */
+  gap: 1rem;
+}
+.section-one-text h1,
+.section-two-text h2 {
+  color: var(--VeryDark-Blue);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem; /* change to bigger  */
+  line-height: 1.4;
+}
+.section-one-text p {
+  color: var(--Desaturated-Blue);
+  font-size: 1rem;
+}
+.section-one-text form
+ {
+  display: grid; /* change to flex spcace between */ 
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+.section-three-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+picture img {
+  width: 100%;
+}
+.section-two {
+  margin-top: -1rem; /* to negate the 1ram gap being applied by body */
+  background-color: var(--LightGrayish-Blue)
+}
+.section-one-text form  input,
+.section-three-form form input {
+  padding-left: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 1px solid var(--Light-Gray);
+  border-radius: 4px;
+  color: var(--Light-Gray);
+}
+.section-one-text form button,
+.section-three-form form button {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  color: var(--LightGrayish-Blue);
+  background-color: var(--Bright-Blue);
+  padding-left: 12px;
+  padding-top: 10px;  /* add 1px each pad-top pad-bottom to compensate for missing 1px from border */
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.section-one-text form button:hover,
+.section-three-form form button {
+  opacity: 0.7;
+}
+
+.section-two-text h2 {
+  font-size: 1rem; /* using the cascade here */
+}
+.text {
+  color: var(--Desaturated-Blue);
+  font-size: 0.925rem;
+}
+.section-two-text p {
+  text-align: left;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.section-two-text a {
+  color: var(--Moderate-Cyan);
+ font-size: 0.9rem;
+ text-decoration: underline var(--Moderate-Cyan);
+}
+.section-two-text a  img {
+  min-width: 20px;
+}
+
+.card {
+  margin: 0.75rem;
+  padding: 0.75rem;
+  box-shadow: -2px 4px 16px var(--Light-Gray);
+  border-radius: 0.4rem;
+  display: grid;
+  gap: 0.5rem;
+ 
+}
+.quote-mark {
+  width: 22px;
+}
+.card-text {
+  color: var(--VeryDark-Blue);
+  font-size: 0.825rem;
+}
+.testimonial-infos {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-bottom: 1rem;
+ 
+}
+.testimonial-infos img {
+  border-radius: 50%;
+  width: 36px;
+}
+
+.name {
+  font-weight: 700;
+}
+.bio {
+  color: var(--Desaturated-Blue);
+  font-size: 0.8rem;
+}
+
+.section-three {
+  background-color: var(--Desaturated-Blue);
+  margin-top: -1rem;
+  margin-bottom: -1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.section-three > * {
+  flex: 1;
+}
+.section-three-form {
+  order: 1; 
+
+}
+.section-three-text {
+  text-align: center;
+ 
+}
+.section-three-text h3 {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.section-three-text h3,
+.section-three-text p {
+  color: var(--LightGrayish-Blue);
+}
+footer {
+  background-color: var(--VeryDark-Blue);
+  display: grid;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  color: var(--Light-Gray);
+}
+
+.footer-logo img {
+  min-width: 210px;
+}
+.footer-grid {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: 1fr; /* change to 2 then 4 */
+}
+.footer-one {
+  display: grid;
+  gap: 1rem;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.footer-list li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-icons li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--LightGrayish-Blue);
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: color 0.15s;
+}
+
+.footer-icons li:hover{
+  color: var(--Bright-Blue);
+}
